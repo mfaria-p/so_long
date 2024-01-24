@@ -69,6 +69,33 @@ void	read_map(char *str, t_data *data)
 	data->map[y] = NULL;
 }
 
+void	char_coord(t_data *data)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	while (data->map[i])
+	{
+		j = 0;
+		while (data->map[i][j] != '\0')
+		{
+			if (data->map[i][j] == 'P')
+			{
+				data->xp = j;
+				data->yp = i;
+			}
+			else if (data->map[i][j] == 'E')
+			{
+				data->xe = j;
+				data->ye = i;
+			}
+			j++;
+		}
+		i++;
+	}
+}
+
 /*int main(void)
 {
 	int	i;
@@ -85,6 +112,7 @@ void	read_map(char *str, t_data *data)
 	}
 	ft_mapformat(&data);
 	ft_nchar(&data);
+ 	char_coord(&data);
 	valid_chars(&data);
 	ft_exit(NULL, EXIT_SUCCESS, &data);
 }*/
