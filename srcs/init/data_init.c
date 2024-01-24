@@ -21,4 +21,8 @@ void	data_init(t_data *data)
 	data->n_colect = 0;
 	data->n_player = 0;
 	data->n_exit = 0;
+	data->xp = 0;
+	data->yp = 0;
+	data->xe = 0;
+	data->ye = 0;
 }
