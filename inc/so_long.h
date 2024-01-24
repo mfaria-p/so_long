@@ -27,6 +27,10 @@ typedef struct s_data
 	int		n_colect;
 	int		n_player;
 	int		n_exit;
+	int		xp;
+	int		yp;
+	int		xe;
+	int		ye;
 }	t_data;
 
 void	ft_checkfile(char *str, t_data *data);
