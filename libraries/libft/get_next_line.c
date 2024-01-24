@@ -6,11 +6,11 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:28:17 by mfaria-p          #+#    #+#             */
-/*   Updated: 2023/11/19 19:46:24 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/24 15:07:05 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "libft.h"
 
 char	*get_newline(char *nest)
 {

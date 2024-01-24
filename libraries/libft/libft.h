@@ -78,9 +78,7 @@ int		print_string(char *str);
 #  define BUFFER_SIZE 42
 # endif
 
-void	*ft_calloc(size_t nmemb, size_t size);
 int		ft_findnl(char *ptr);
-size_t	ft_strlen(const char *s);
 char	*ft_strappend(char *nest, char *buffer);
 char	*get_next_line(int fd);
 char	*get_newline(char *nest);

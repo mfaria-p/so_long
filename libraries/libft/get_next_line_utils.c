@@ -6,27 +6,11 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/19 19:28:50 by mfaria-p          #+#    #+#             */
-/*   Updated: 2023/11/19 19:28:54 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/24 15:07:22 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
-
-void	*ft_calloc(size_t nmemb, size_t size)
-{
-	char	*ptr;
-	int		i;
-	int		n;
-
-	i = 0;
-	n = nmemb * size;
-	ptr = malloc(nmemb * size);
-	if (!ptr)
-		return (NULL);
-	while (n--)
-		ptr[i++] = '\0';
-	return (ptr);
-}
+#include "libft.h"
 
 int	ft_findnl(char *ptr)
 {
@@ -42,18 +26,6 @@ int	ft_findnl(char *ptr)
 		i++;
 	}
 	return (0);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	if (!s)
-		return (0);
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
 }
 
 char	*ft_strappend(char *nest, char *buffer)
