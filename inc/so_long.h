@@ -41,5 +41,6 @@ void	ft_mapformat(t_data *data);
 void	ft_nchar(t_data *data);
 void	data_init(t_data *data);
 void	valid_chars(t_data *data);
+void	char_coord(t_data *data);
 
 #endif
