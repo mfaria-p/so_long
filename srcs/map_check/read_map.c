@@ -114,5 +114,6 @@ void	char_coord(t_data *data)
 	ft_nchar(&data);
  	char_coord(&data);
 	valid_chars(&data);
+ 	map_flood(&data);
 	ft_exit(NULL, EXIT_SUCCESS, &data);
 }*/
