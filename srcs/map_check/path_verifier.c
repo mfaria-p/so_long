@@ -12,7 +12,7 @@
 
 #include "../../inc/solong.h"
 
-void	mapflood(t_data *data)
+void	map_flood(t_data *data)
 {
 	int		ne;
 	int		nc;
