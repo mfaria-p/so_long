@@ -25,4 +25,12 @@ void	data_init(t_data *data)
 	data->yp = 0;
 	data->xe = 0;
 	data->ye = 0;
+	data->mlx_ptr = 0;
+	data->win_ptr = 0;
+	data->cimg = 0;
+	data->eimg = 0;
+	data->fimg = 0;
+	data->pimg = 0;
+	data->wimg = 0;
+	data->size = SIZE;
 }

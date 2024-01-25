@@ -6,7 +6,7 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/24 17:07:48 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/24 20:27:26 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/25 18:22:43 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 void	ft_mapformat(t_data *data)
 {
 	int		x;
-	int		y;
 
 	x = 0;
 	data->max_x = (int)ft_strlen(data->map[x]);
+	if (data->max_x == 0)
+		ft_exit("Empty line(s) at the start of the file.", EXIT_FAILURE, data);
 	while (data->map[++x])
 		if (data->max_x != (int)(ft_strlen(data->map[x])))
-			ft_exit("The map is not retangular", EXIT_FAILURE, data);
+			ft_exit("The map is not a retangle", EXIT_FAILURE, data);
 	if (data->max_x < 3 || data->max_y < 3)
 		ft_exit("Not enough width and height.", EXIT_FAILURE, data);
 	x = 0;
@@ -31,12 +32,12 @@ void	ft_mapformat(t_data *data)
 			ft_exit("Missing walls.", EXIT_FAILURE, data);
 		x++;
 	}
-	y = 1;
-	while (data->map[y])
+	x = 1;
+	while (data->map[x])
 	{
-		if (data->map[y][0] != '1' || data->map[y][data->max_x - 1] != '1')
+		if (data->map[x][0] != '1' || data->map[x][data->max_x - 1] != '1')
 			ft_exit("Missing walls.", EXIT_FAILURE, data);
-		y++;
+		x++;
 	}
 }
 

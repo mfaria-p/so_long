@@ -6,7 +6,7 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 20:04:42 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/24 20:28:27 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/25 20:08:15 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,8 +102,8 @@ void	char_coord(t_data *data)
 	t_data	data;
 
 	data_init(&data);
-	ft_checkfile("../../maps/invalid/invalid_char.ber",	&data);
-	read_map("../../maps/invalid/invalid_char.ber", &data);
+	ft_checkfile("maps/invalid/just_a_line.ber",	&data);
+	read_map("maps/invalid/just_a_line.ber", &data);
 	i = 0;
 	while (data.map[i])
 	{

@@ -6,25 +6,30 @@
 #    By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 17:28:13 by mfaria-p          #+#    #+#              #
-#    Updated: 2024/01/23 18:06:27 by mfaria-p         ###   ########.fr        #
+#    Updated: 2024/01/25 20:23:20 by mfaria-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 
+SRCS = srcs/error_handling/errors.c \
+       srcs/init/data_init.c \
+       srcs/init/game_init.c \
+       srcs/map_check/map_verifier.c \
+       srcs/map_check/path_verifier.c \
+       srcs/map_check/read_map.c \
+       main.c
 
 OBJS = $(SRCS:.c=.o)
 
 NAME = so_long
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
-MLXFLAGS = -L. lXext -L. lX11
-RM = rm -f
+MLXFLAGS = -lXext -lX11
 
 LIBFT_PATH = ./libraries/libft
 LIBFT = $(LIBFT_PATH)/libft.a
 
 MINILIBX_PATH = ./libraries/minilibx-linux
-MINILIBX = $(MINILIBX_PATH)/liblmx_Linux.a
+MINILIBX = $(MINILIBX_PATH)/libmlx_Linux.a
 
 all: $(NAME)
 
@@ -40,7 +45,7 @@ $(MINILIBX):
 clean:
 	make -C $(LIBFT_PATH) clean
 	make -C $(MINILIBX_PATH) clean
-	$(RM) $(OBJECTS)
+	rm -f $(OBJS)
 
 fclean: clean
 	make -C $(LIBFT_PATH) fclean

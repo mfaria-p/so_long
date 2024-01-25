@@ -17,6 +17,9 @@
 # include "../libraries/libft/libft.h"
 # include <stdio.h>
 # include <fcntl.h>
+# include <X11/X.h>
+
+# define SIZE 18
 
 typedef struct s_data
 {
@@ -31,6 +34,14 @@ typedef struct s_data
 	int		yp;
 	int		xe;
 	int		ye;
+	void	*mlx_ptr;
+	void	*win_ptr;
+	void	*cimg;
+	void	*eimg;
+	void	*fimg;
+	void	*pimg;
+	void	*wimg;
+	int	size;
 }	t_data;
 
 void	ft_checkfile(char *str, t_data *data);
@@ -43,6 +54,7 @@ void	data_init(t_data *data);
 void	valid_chars(t_data *data);
 void	char_coord(t_data *data);
 void	map_flood(t_data *data);
-char	**ft_flood(t_data *data, int yp, int xp, int *ne, int *nc);
+char	**ft_flood(t_data *data, int yp, int xp, int *ne);
+void	game_init(t_data *data);
 
 #endif
