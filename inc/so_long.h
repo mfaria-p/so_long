@@ -42,5 +42,7 @@ void	ft_nchar(t_data *data);
 void	data_init(t_data *data);
 void	valid_chars(t_data *data);
 void	char_coord(t_data *data);
+void	map_flood(t_data *data);
+char	**ft_flood(t_data *data, int yp, int xp, int *ne, int *nc);
 
 #endif
