@@ -12,14 +12,16 @@
 
 #include "inc/so_long.h"
 
-int main(void)
+int main(int ac, char **av)
 {
 	int	i;
 	t_data	data;
 
+	if (ac != 2)
+		ft_exit("Wrong input.", EXIT_FAILURE, &data);
 	data_init(&data);
-	ft_checkfile("maps/invalid/just_a_line.ber",	&data);
-	read_map("maps/invalid/just_a_line.ber", &data);
+	ft_checkfile(av[1], &data);
+	read_map(av[1], &data);
 	i = 0;
 	while (data.map[i])
 	{
@@ -31,6 +33,18 @@ int main(void)
 	valid_chars(&data);
  	char_coord(&data);
  	map_flood(&data);
+ 	i = 0;
+ 	if (data.map)
+ 	{
+ 		while (data.map[i])
+ 		{
+ 			free(data.map[i]);
+ 			i++;
+ 		}
+ 		free(data.map[i]);
+ 		free(data.map);
+ 	}
+ 	read_map(av[1], &data);
 	game_init(&data);
-	ft_exit(NULL, EXIT_SUCCESS, &data);
+	//ft_exit(NULL, EXIT_SUCCESS, &data);
 }

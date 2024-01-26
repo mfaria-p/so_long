@@ -18,8 +18,9 @@
 # include <stdio.h>
 # include <fcntl.h>
 # include <X11/X.h>
+# include <X11/keysym.h>
 
-# define SIZE 18
+# define SIZE 128
 
 typedef struct s_data
 {
@@ -56,5 +57,8 @@ void	char_coord(t_data *data);
 void	map_flood(t_data *data);
 char	**ft_flood(t_data *data, int yp, int xp, int *ne);
 void	game_init(t_data *data);
+void	*load_image(t_data *data, char *path);
+void	set_screen(t_data *data);
+void	set_image(t_data *data, int x, int y);
 
 #endif
