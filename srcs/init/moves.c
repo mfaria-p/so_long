@@ -75,7 +75,7 @@ void up_move(t_data *data)
 	}  
 }
 
-void left_move(t_data *data)
+void down_move(t_data *data)
 {
  	data->moves++;
  	ft_printf("Moves: %i\n", data->moves);
