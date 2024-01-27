@@ -28,6 +28,7 @@ void	game_init(t_data *data)
 	data->wimg = load_image(data, "./textures/wall.xpm");
 	set_screen(data);
 	mlx_hook(data->win_ptr, KeyRelease, KeyReleaseMask, &on_keypress, data);
+	mlx_hook(d->mlx_win, DestroyNotify, StructureNotifyMask, &ft_esc, d);
 	mlx_loop(data->mlx_ptr);
 }
 
@@ -89,14 +90,12 @@ int	on_keypress(int keycode, t_data *data)
 	if (keycode == XK_Escape)
 		ft_exit(NULL, EXIT_SUCCESS, data);
 	else if (keycode == XK_Left && data->map[data->yp][data->xp - 1] != '1')
-		works = left_move(data);
+		left_move(data);
 	else if (keycode == XK_Right && data->map[data->yp][data->xp + 1] != '1')
-		works = right_move(data);
+		right_move(data);
 	else if (keycode == XK_Up && data->map[data->yp + 1][data->xp] != '1')
-		works = up_move(data);
+		up_move(data);
 	else if (keycode == XK_Down && data->map[data->yp - 1][data->xp] != '1')
-		works = down_move(data);
-	if (works)
-		set_screen(data);
+		down_move(data);
 	return (0);
 }
