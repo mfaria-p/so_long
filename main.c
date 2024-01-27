@@ -46,5 +46,5 @@ int main(int ac, char **av)
  	}
  	read_map(av[1], &data);
 	game_init(&data);
-	//ft_exit(NULL, EXIT_SUCCESS, &data);
+	ft_exit(NULL, EXIT_SUCCESS, &data);
 }
