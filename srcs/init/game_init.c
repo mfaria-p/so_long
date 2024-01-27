@@ -28,7 +28,7 @@ void	game_init(t_data *data)
 	data->wimg = load_image(data, "./textures/wall.xpm");
 	set_screen(data);
 	mlx_hook(data->win_ptr, KeyRelease, KeyReleaseMask, &on_keypress, data);
-	mlx_hook(d->mlx_win, DestroyNotify, StructureNotifyMask, &ft_esc, d);
+	mlx_hook(d->mlx_win, DestroyNotify, StructureNotifyMask, &end_game, d);
 	mlx_loop(data->mlx_ptr);
 }
 
