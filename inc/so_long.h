@@ -43,6 +43,7 @@ typedef struct s_data
 	void	*pimg;
 	void	*wimg;
 	int	size;
+	int	moves;
 }	t_data;
 
 void	ft_checkfile(char *str, t_data *data);
@@ -60,5 +61,11 @@ void	game_init(t_data *data);
 void	*load_image(t_data *data, char *path);
 void	set_screen(t_data *data);
 void	set_image(t_data *data, int x, int y);
-
+int	on_keypress(int keycode, t_data *data);
+void	right_move(t_data *data);
+void	left_move(t_data *data);
+void	up_move(t_data *data);
+void	down_move(t_data *data);
+void	destroy_images(t_data *data);
+int	end_game(t_data *data);
 #endif
