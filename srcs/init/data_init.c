@@ -33,4 +33,5 @@ void	data_init(t_data *data)
 	data->pimg = 0;
 	data->wimg = 0;
 	data->size = SIZE;
+	data->moves = 0;
 }
