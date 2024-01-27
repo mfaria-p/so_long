@@ -12,7 +12,7 @@
 
 #include "../../inc/so_long.h"
 
-void right_move(t_data *data)
+void	right_move(t_data *data)
 {
  	data->moves++;
  	ft_printf("Moves: %i\n", data->moves);
@@ -33,7 +33,7 @@ void right_move(t_data *data)
 	}  
 }
 
-void left_move(t_data *data)
+void	left_move(t_data *data)
 {
  	data->moves++;
  	ft_printf("Moves: %i\n", data->moves);
@@ -54,7 +54,7 @@ void left_move(t_data *data)
 	}  
 }
 
-void up_move(t_data *data)
+void	up_move(t_data *data)
 {
  	data->moves++;
  	ft_printf("Moves: %i\n", data->moves);
@@ -75,7 +75,7 @@ void up_move(t_data *data)
 	}  
 }
 
-void down_move(t_data *data)
+void	down_move(t_data *data)
 {
  	data->moves++;
  	ft_printf("Moves: %i\n", data->moves);
