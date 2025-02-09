@@ -6,13 +6,14 @@
 #    By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/23 17:28:13 by mfaria-p          #+#    #+#              #
-#    Updated: 2024/01/25 20:23:20 by mfaria-p         ###   ########.fr        #
+#    Updated: 2024/01/29 19:57:08 by mfaria-p         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = srcs/error_handling/errors.c \
        srcs/init/data_init.c \
        srcs/init/game_init.c \
+       srcs/init/moves.c \
        srcs/map_check/map_verifier.c \
        srcs/map_check/path_verifier.c \
        srcs/map_check/read_map.c \

@@ -6,7 +6,7 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 22:42:36 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/26 22:47:08 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:50:18 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 void	right_move(t_data *data)
 {
- 	data->moves++;
- 	ft_printf("Moves: %i\n", data->moves);
- 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+	data->moves++;
+	ft_printf("Moves: %i\n", data->moves);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->fimg, data->xp * SIZE, data->yp * SIZE);
 	data->xp++;
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->pimg, data->xp * SIZE, data->yp * SIZE);
-	if (d->map[data->yp][data->xp] == 'C')
+	if (data->map[data->yp][data->xp] == 'C')
 	{
 		data->n_colect--;
 		data->map[data->yp][data->xp] = '0';
@@ -30,19 +30,19 @@ void	right_move(t_data *data)
 	{
 		ft_printf("Yey! Game over!\n");
 		ft_exit(NULL, EXIT_SUCCESS, data);
-	}  
+	}
 }
 
 void	left_move(t_data *data)
 {
- 	data->moves++;
- 	ft_printf("Moves: %i\n", data->moves);
- 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+	data->moves++;
+	ft_printf("Moves: %i\n", data->moves);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->fimg, data->xp * SIZE, data->yp * SIZE);
 	data->xp--;
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->pimg, data->xp * SIZE, data->yp * SIZE);
-	if (d->map[data->yp][data->xp] == 'C')
+	if (data->map[data->yp][data->xp] == 'C')
 	{
 		data->n_colect--;
 		data->map[data->yp][data->xp] = '0';
@@ -51,19 +51,19 @@ void	left_move(t_data *data)
 	{
 		ft_printf("Yey! Game over!\n");
 		ft_exit(NULL, EXIT_SUCCESS, data);
-	}  
+	}
 }
 
 void	up_move(t_data *data)
 {
- 	data->moves++;
- 	ft_printf("Moves: %i\n", data->moves);
- 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+	data->moves++;
+	ft_printf("Moves: %i\n", data->moves);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->fimg, data->xp * SIZE, data->yp * SIZE);
 	data->yp--;
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->pimg, data->xp * SIZE, data->yp * SIZE);
-	if (d->map[data->yp][data->xp] == 'C')
+	if (data->map[data->yp][data->xp] == 'C')
 	{
 		data->n_colect--;
 		data->map[data->yp][data->xp] = '0';
@@ -72,19 +72,19 @@ void	up_move(t_data *data)
 	{
 		ft_printf("Yey! Game over!\n");
 		ft_exit(NULL, EXIT_SUCCESS, data);
-	}  
+	}
 }
 
 void	down_move(t_data *data)
 {
- 	data->moves++;
- 	ft_printf("Moves: %i\n", data->moves);
- 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+	data->moves++;
+	ft_printf("Moves: %i\n", data->moves);
+	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->fimg, data->xp * SIZE, data->yp * SIZE);
 	data->yp++;
 	mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
 		data->pimg, data->xp * SIZE, data->yp * SIZE);
-	if (d->map[data->yp][data->xp] == 'C')
+	if (data->map[data->yp][data->xp] == 'C')
 	{
 		data->n_colect--;
 		data->map[data->yp][data->xp] = '0';
@@ -93,5 +93,5 @@ void	down_move(t_data *data)
 	{
 		ft_printf("Yey! Game over!\n");
 		ft_exit(NULL, EXIT_SUCCESS, data);
-	}  
+	}
 }

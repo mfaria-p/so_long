@@ -6,7 +6,7 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/25 18:33:06 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/26 22:27:05 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:46:17 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ void	game_init(t_data *data)
 	data->wimg = load_image(data, "./textures/wall.xpm");
 	set_screen(data);
 	mlx_hook(data->win_ptr, KeyRelease, KeyReleaseMask, &on_keypress, data);
-	mlx_hook(d->mlx_win, DestroyNotify, StructureNotifyMask, &end_game, d);
+	mlx_hook(data->win_ptr, DestroyNotify, StructureNotifyMask, 
+		&end_game, data);
 	mlx_loop(data->mlx_ptr);
 }
 
@@ -93,9 +94,20 @@ int	on_keypress(int keycode, t_data *data)
 		left_move(data);
 	else if (keycode == XK_Right && data->map[data->yp][data->xp + 1] != '1')
 		right_move(data);
-	else if (keycode == XK_Up && data->map[data->yp + 1][data->xp] != '1')
+	else if (keycode == XK_Up && data->map[data->yp - 1][data->xp] != '1')
 		up_move(data);
-	else if (keycode == XK_Down && data->map[data->yp - 1][data->xp] != '1')
+	else if (keycode == XK_Down && data->map[data->yp + 1][data->xp] != '1')
 		down_move(data);
+	if (data->xe == data->xp && data->ye == data->yp && data->n_colect > 0)
+	{
+		data->n_exit = 0;
+	}
+	else if (data->n_exit == 0 && (data->xp != data->xe 
+			|| data ->yp != data->xe))
+	{
+		data->n_exit = 1;
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr, 
+			data->eimg, data->xe * SIZE, data->ye * SIZE);
+	}
 	return (0);
 }

@@ -6,12 +6,12 @@
 /*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:25:28 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/24 14:57:14 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2024/01/29 20:52:06 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SOLONG_H
-#define SOLONG_H
+#ifndef SO_LONG_H
+# define SO_LONG_H
 
 # include "../libraries/minilibx-linux/mlx.h"
 # include "../libraries/libft/libft.h"
@@ -42,8 +42,8 @@ typedef struct s_data
 	void	*fimg;
 	void	*pimg;
 	void	*wimg;
-	int	size;
-	int	moves;
+	int		size;
+	int		moves;
 }	t_data;
 
 void	ft_checkfile(char *str, t_data *data);
@@ -61,11 +61,11 @@ void	game_init(t_data *data);
 void	*load_image(t_data *data, char *path);
 void	set_screen(t_data *data);
 void	set_image(t_data *data, int x, int y);
-int	on_keypress(int keycode, t_data *data);
+int		on_keypress(int keycode, t_data *data);
 void	right_move(t_data *data);
 void	left_move(t_data *data);
 void	up_move(t_data *data);
 void	down_move(t_data *data);
 void	destroy_images(t_data *data);
-int	end_game(t_data *data);
+int		end_game(t_data *data);
 #endif
