@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   moves.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfaria-p <mfaria-p@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 22:42:36 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/29 20:50:18 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:56:32 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,22 @@ void	right_move(t_data *data)
 	}
 	if (data->xp == data->xe && data->yp == data->ye && data->n_colect == 0)
 	{
+		// Print player at the exit position
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->pimg, data->xe * SIZE, data->ye * SIZE);
+		
+		// Allow MLX to refresh before displaying "You Win" image
+		mlx_do_sync(data->mlx_ptr);
+
+		usleep(1000000);
+		
+		// Print message to console
 		ft_printf("Yey! Game over!\n");
+
 		ft_exit(NULL, EXIT_SUCCESS, data);
 	}
+
+		
 }
 
 void	left_move(t_data *data)
@@ -49,7 +62,18 @@ void	left_move(t_data *data)
 	}
 	if (data->xp == data->xe && data->yp == data->ye && data->n_colect == 0)
 	{
+		// Print player at the exit position
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->pimg, data->xe * SIZE, data->ye * SIZE);
+		
+		// Allow MLX to refresh before displaying "You Win" image
+		mlx_do_sync(data->mlx_ptr);
+
+		usleep(1000000);
+		
+		// Print message to console
 		ft_printf("Yey! Game over!\n");
+
 		ft_exit(NULL, EXIT_SUCCESS, data);
 	}
 }
@@ -70,7 +94,18 @@ void	up_move(t_data *data)
 	}
 	if (data->xp == data->xe && data->yp == data->ye && data->n_colect == 0)
 	{
+		// Print player at the exit position
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->pimg, data->xe * SIZE, data->ye * SIZE);
+		
+		// Allow MLX to refresh before displaying "You Win" image
+		mlx_do_sync(data->mlx_ptr);
+
+		usleep(1000000);
+		
+		// Print message to console
 		ft_printf("Yey! Game over!\n");
+
 		ft_exit(NULL, EXIT_SUCCESS, data);
 	}
 }
@@ -91,7 +126,18 @@ void	down_move(t_data *data)
 	}
 	if (data->xp == data->xe && data->yp == data->ye && data->n_colect == 0)
 	{
+		// Print player at the exit position
+		mlx_put_image_to_window(data->mlx_ptr, data->win_ptr,
+			data->pimg, data->xe * SIZE, data->ye * SIZE);
+		
+		// Allow MLX to refresh before displaying "You Win" image
+		mlx_do_sync(data->mlx_ptr);
+
+		usleep(1000000);
+		
+		// Print message to console
 		ft_printf("Yey! Game over!\n");
+
 		ft_exit(NULL, EXIT_SUCCESS, data);
 	}
 }

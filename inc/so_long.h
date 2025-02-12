@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mfaria-p <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mfaria-p <mfaria-p@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 18:25:28 by mfaria-p          #+#    #+#             */
-/*   Updated: 2024/01/29 20:52:06 by mfaria-p         ###   ########.fr       */
+/*   Updated: 2025/02/12 17:55:28 by mfaria-p         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,13 @@
 # include "../libraries/libft/libft.h"
 # include <stdio.h>
 # include <fcntl.h>
+#include <unistd.h>
 # include <X11/X.h>
 # include <X11/keysym.h>
 
 # define SIZE 128
+#define WIN_SIZE_H 532
+#define WIN_SIZE_V 229
 
 typedef struct s_data
 {
