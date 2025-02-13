@@ -1,3 +1,4 @@
 libraries/minilibx-linux/* linguist-vendored
 libraries/minilibx-linux/test/* linguist-vendored
-libraries/minilibx-linux/man/* linguist-vendored
+libraries/minilibx-linux/man/man1/* linguist-vendored
+libraries/minilibx-linux/man/man3/* linguist-vendored
