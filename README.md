@@ -1,5 +1,7 @@
 # so_long
 
+![Game Screenshot](game_screenshot.gif)
+
 ## Description
 so_long is a small 2D game developed using the MiniLibX library. This project serves as an introduction to game development concepts such as textures, sprites, and tile-based maps.
 
